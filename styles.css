@@ -287,41 +287,33 @@ body {
     html {
         font-size: 22px;
     }
-
     .article__sidebar__container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
     .article {
         width: 60%;
     }
-
     .article__desc {
         margin: 0;
     }
-
     .sidebar {
         flex-direction: column;
         width: 30%;
     }
-
     .sidebar__content+.sidebar__content {
         /* display: flex; */
         /* flex-direction: column; */
         margin-left: 0;
     }
-
     .row__large {
         display: flex;
         justify-content: space-between;
     }
-
     .hero__title {
         width: 45%;
     }
-
     .hero__text {
         width: 50%;
         align-self: flex-end;
