@@ -303,8 +303,6 @@ body {
         width: 30%;
     }
     .sidebar__content+.sidebar__content {
-        /* display: flex; */
-        /* flex-direction: column; */
         margin-left: 0;
     }
     .row__large {
