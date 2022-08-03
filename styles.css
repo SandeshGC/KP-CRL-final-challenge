@@ -14,7 +14,7 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 body {
@@ -37,8 +37,9 @@ body {
     font-family: var(--bold);
 
 }
-.site-title{
-    cursor:cell;
+
+.site-title {
+    cursor: cell;
 }
 
 /* for hamburger menu */
@@ -51,7 +52,7 @@ body {
     justify-content: center;
     position: absolute;
     right: 1rem;
-    top: 1.25rem;
+    top: 1.5rem;
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 200ms ease-in-out;
@@ -85,10 +86,15 @@ body {
     }
 }
 
+.nav__bar {
+    padding: 1em 0;
+}
+
 .nav__menu {
     display: none;
     animation: fade-in 500ms ease-out;
-    padding: 1em;
+    background-color: var(--black);
+    width: 100%;
 }
 
 .nav__menu.visible {
@@ -96,9 +102,6 @@ body {
     animation: fade-in 500ms ease-out;
 }
 
-.nav__bar {
-    padding: 1em 0;
-}
 
 .nav__list, .footer__menu {
     list-style-type: none;
@@ -111,7 +114,6 @@ body {
 
 .nav__item {
     text-transform: uppercase;
-    margin: 0.2em;
     cursor: pointer;
     transition: opacity 200ms ease-in-out;
 }
@@ -125,7 +127,6 @@ body {
     background-color: var(--golden-brown);
     border-radius: 5em;
 }
-
 
 .hero {
     background-color: var(--dark);
@@ -235,6 +236,8 @@ body {
 }
 
 @media (min-width:700px) {
+
+    /*for medium screens*/
     html {
         font-size: 22px;
     }
@@ -253,11 +256,16 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: fit-content;
+        padding: 0;
     }
 
     .nav__list {
         flex-direction: row;
-        justify-content: flex-end;
+    }
+
+    .nav__list+.nav__list, .nav__item+.nav__item {
+        margin-left: 1em;
     }
 
     .row {
@@ -276,6 +284,10 @@ body {
 }
 
 @media(min-width: 1000px) {
+    html {
+        font-size: 22px;
+    }
+
     .article__sidebar__container {
         display: flex;
         flex-direction: row;
@@ -307,10 +319,11 @@ body {
     }
 
     .hero__title {
-        width: 40%;
+        width: 45%;
     }
 
     .hero__text {
         width: 50%;
+        align-self: flex-end;
     }
 }
