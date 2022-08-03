@@ -35,19 +35,72 @@ body {
     background-color: var(--black);
     color: var(--white);
     font-family: var(--bold);
-    
+
+}
+.site-title{
+    cursor:cell;
 }
 
 /* for hamburger menu */
-/* .nav__list--visible{
-    visibility: visible;
-} */
+.nav__list--toggle {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    top: 1.25rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 200ms ease-in-out;
+}
+
+.nav__list--toggle:hover {
+    opacity: 1;
+}
+
+.toggle__menu--bars {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+}
+
+.toggle__menu--bars+.toggle__menu--bars {
+    margin-top: 4px;
+}
+
+.visible {
+    display: block;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav__menu {
+    display: none;
+    animation: fade-in 500ms ease-out;
+    padding: 1em;
+}
+
+.nav__menu.visible {
+    display: block;
+    animation: fade-in 500ms ease-out;
+}
+
 .nav__bar {
     padding: 1em 0;
 }
 
 .nav__list, .footer__menu {
-    /* visibility: hidden; */
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -59,15 +112,20 @@ body {
 .nav__item {
     text-transform: uppercase;
     margin: 0.2em;
-    cursor:pointer;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+}
+
+.nav__item:hover {
+    opacity: 0.75;
 }
 
 .nav__btn {
     padding: 0.1em 1em;
     background-color: var(--golden-brown);
     border-radius: 5em;
-    cursor: pointer;
 }
+
 
 .hero {
     background-color: var(--dark);
@@ -93,6 +151,11 @@ body {
     font-family: var(--bold);
     font-size: 1rem;
     cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+}
+
+.hero__cta--btn:hover {
+    opacity: 0.75;
 }
 
 .feature__title {
@@ -136,7 +199,9 @@ body {
     color: var(--grey);
 }
 
-.footer__title {}
+.footer__title {
+    text-align: center;
+}
 
 .footer__content {
     line-height: 2.5em;
@@ -174,9 +239,13 @@ body {
         font-size: 22px;
     }
 
+    .nav__list--toggle {
+        display: none;
+    }
+
     .nav__bar {
         display: flex;
-        /* align-items: center; */
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -187,7 +256,6 @@ body {
     }
 
     .nav__list {
-        /* display: flex; */
         flex-direction: row;
         justify-content: flex-end;
     }
